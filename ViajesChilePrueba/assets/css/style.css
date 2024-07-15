@@ -6,6 +6,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /*<------------ Estilos de carousel section hero ------------> */
 .carousel-hero{
@@ -93,7 +96,7 @@ i{
 }
 
 /*<----------------- Estilo de seccion destacados ----------------->*/
-.destacados{
+section.destacados{
     background-color: black;
     color: white;
 }
@@ -106,9 +109,73 @@ i{
 
 .card{
     background-color: var(--celeste) !important;
+    padding-bottom: 20px;
+}
+
+.card-title, .card-body{
+    color: white !important;
 }
 
 .card-img-top{
     object-fit: cover;
     height: 200px;
+}
+
+/*<----------------- Estilo de seccion contacto ----------------->*/
+section.contacto{
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+}
+
+.contacto h2{
+    text-align: center;
+    padding: 50px 0px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.contacto-form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn-enviar{
+    background-color: var(--celeste) !important;
+}
+
+/*<----------------- Estilo de footer ----------------->  */
+footer{
+    background-color: var(--celeste);
+    color: white;
+    padding: 15px 0;
+}
+
+div.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.col-md-4 h3{
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.footer-icons ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-icons li{
+    list-style: none;
+}
+
+li a{
+    color: white;
 }
