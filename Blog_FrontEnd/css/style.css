@@ -1,0 +1,246 @@
+:root{
+    --color_negro: #000000;
+    --color_naranjo :#E93E30;
+    --color_amarillo :#F7E018;
+    --color_celeste : #299ED5;
+    --color_azul-gris : #292C33;
+    --color_verde :#67C770;
+    --color_morado :#563D7C;
+    --fuente: "Poppins", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente);
+}
+
+/*<-------------------- ESTILOS REUTILIZABLES -------------------->*/
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+section.container{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+/* Para centrar verticalmente los elementos */
+.center-v{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+/* Para alinear elementos en dos columnas */
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 100px;
+}
+.main-title{
+    margin-bottom: 20px;
+}
+/* Weight prinicipal de fechas y titulos */
+.w-date{
+    font-weight: 400;
+}
+.w-title{
+    font-weight: 700;
+}
+/* Redondeo de elementos */
+.b-r-2{
+    border-radius: 20px;
+}
+
+/*<----------------- ESTILOS BARRA DE NAVEGACIÓN/FOOTER ----------------->*/
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.foo{
+    display: grid;
+    grid-template-columns: 1.2fr 0.4fr;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+.navbar__logo, .foo-left__logo{
+    width: 50px;
+    height: 50px;
+}
+.navbar h1, .foo-left h1{
+    font-size: 24px;
+}
+
+.foo-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.foo-right{
+    width: fit-content;
+    font-size: 20px;
+}
+
+
+
+/*<------------------ ESTILOS DE NOVEDAD PRINCIPAL ----------------->*/
+.n{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 100px;
+}
+.n-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.n-principal__image{
+    width: 100%;
+}
+.n-principal__date{
+    font-size: 18px;
+}
+.n-principal__title{
+    font-size: 24px;
+}
+.n-principal__marca img{
+    width: 60px ;
+    height:  60px;
+    border-radius: 100%;
+}
+.n-principal__marca p{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+/*<------------------ ESTILOS DE NOVEDADES SECUNDARIAS ----------------->*/
+.n-secondary{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.n-secondary__item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.n-secondary__item__img{
+    width: 189px;
+    height: 145px;
+    object-fit: cover;
+}
+.n-secondary__item__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 187px;
+    height: 100%;
+}
+.n-secondary__item__date{
+    font-weight: 400;
+    font-size: 16px;
+}
+.n-secondary__item__title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+.n-secondary__item__marca img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.n-secondary__item__marca p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*<--------------------- ESTILOS DE POPULARES ----------------------->*/
+.popular{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.popular__item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+.popular__item__image{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+.popular__item__date{
+    font-size: 16px;
+    line-height: 24px;
+}
+.popular__item__title{
+    font-size: 20px;
+    line-height: 30px;
+
+}
+.popular__item__marca img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.popular__item__marca{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*<--------------------- ESTILOS DE CATEGORIAS ----------------------->*/
+.categorias{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 30px;
+}
+.categorias__item{
+    width: 298px;
+    height: 89px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
+    font-size: 32px;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.bg-html{
+    background-color: var(--color_naranjo);
+}
+.bg-js{
+    background-color: var(--color_amarillo);
+}
+.bg-css{
+    background-color: var(--color_celeste);
+}
+.bg-react{
+    background-color: var(--color_azul-gris);
+}
+.bg-vue{
+    background-color: var(--color_verde);
+}
+.bg-bootstrap{
+    background-color: var(--color_morado);
+}
